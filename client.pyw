@@ -1,7 +1,7 @@
 import sys
-from tkinter import *
 import socket
 import threading
+from tkinter import *
 
 # Server connection parameters
 ip = '127.0.0.1'
