@@ -3,7 +3,7 @@ from tkinter import *
 import socket
 import threading
 
-# Server connection settings
+# Server connection parameters
 ip = '127.0.0.1'
 PORT = 5432
 FORMAT = 'utf-8'

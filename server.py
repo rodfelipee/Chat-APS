@@ -1,17 +1,17 @@
 import socket
 import threading
 
+#Server parameters
 HOST = '127.0.0.1'
 PORT = 5432
 FORMAT = 'utf-8'
-
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 
 clients = []
 names = []
 
-
+    #Handle
 def handle(con, addressip):
 
     print(f'Connection address: {addressip}\n')
@@ -22,12 +22,12 @@ def handle(con, addressip):
         terminalMsg(message)
     con.close()
 
-
+    #Send prompt info
 def terminalMsg(message):
     for client in clients:
         client.send(message)
 
-
+    #Init server
 def chatInit():
     server.listen()
     print(f'Server is running: {HOST}\n')
