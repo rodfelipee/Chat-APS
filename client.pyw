@@ -140,7 +140,7 @@ class Interface():
     def sendMsg(self):
         self.textContainer.config(state=DISABLED)
         while True:
-            message = (f'{self.name} >> {self.message}\n')
+            message = (f'{self.name} >>  {self.message}\n')
             client.send(message.encode(FORMAT))
             break
 
