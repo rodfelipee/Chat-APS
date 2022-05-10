@@ -1,5 +1,5 @@
-import sys
 from tkinter import *
+import sys
 import socket
 import threading
 
