@@ -4,11 +4,11 @@ import threading
 from tkinter import *
 
 # Server connection parameters
-ip = '127.0.0.1'
+HOST = '127.0.0.1'
 PORT = 5432
 FORMAT = 'utf-8'
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect((ip, PORT))
+client.connect((HOST, PORT))
 
 
 class Interface():
