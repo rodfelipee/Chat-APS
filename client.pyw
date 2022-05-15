@@ -97,9 +97,6 @@ class Interface():
         self.window.bind(
             '<Return>', lambda x: self.sendBtn(self.messageBox.get()))
 
-        # Chat main cursor
-        self.textContainer.config(cursor='arrow')
-
         # Chat scroll settings
         scroll = Scrollbar(self.textContainer)
         scroll.place(relheight=1, relx=1)
