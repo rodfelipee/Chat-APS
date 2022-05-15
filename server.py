@@ -19,11 +19,11 @@ def handle(con, addressip):
 
     while connected:
         message = con.recv(1024)
-        terminalMsg(message)
+        tMsg(message)
     con.close()
 
-    #Send prompt info
-def terminalMsg(message):
+    #Broadcast function
+def tMsg(message):
     for client in clients:
         client.send(message)
 
@@ -41,7 +41,7 @@ def chatInit():
         clients.append(con)
         print(f'\n{name} joinned the server.\n')
 
-        terminalMsg(f'{name} joinned!\n'.encode(FORMAT))
+        tMsg(f'{name} joinned!\n'.encode(FORMAT))
         con.send(f'connection successful!\n'.encode(FORMAT))
 
         thread = threading.Thread(target=handle, args=(con, addressip))
